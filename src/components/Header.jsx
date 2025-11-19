@@ -1,16 +1,16 @@
-import Logo from "../logo/Baking Recipe.png"
-const Header = ({name}) =>{
+const Header = () =>{
 
     return(
           <>
-          <header className="drop-shadow-md shadow-emerald-800">
-            <img src={Logo} alt="" className = "w-16" />
+          <header className="drop-shadow-md">
              <article className='flex justify-between items-center'>
-              <div className='flex items-center'>
-                     <h1 className=" text-4xl font-bold text-emerald-600">Baking Recipe</h1>
-    </div>
+              
+                <h1 className=" text-4xl font-bold text-[#0f0f0f] mt-10">Easy Baking Recipe</h1>
+    
     <div>
-        <h3 className='text-emerald-400 font-semibold text-3xl'>Hello {name}</h3>
+        <a href="" className="text-[#0f0f0f] border-4 font-bold border-solid border-black text-4xl mr-10 mt-100">Process</a>
+
+
     </div>
     </article>
      </header>
