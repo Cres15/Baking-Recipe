@@ -94,12 +94,7 @@ const RecipeForm = ({ formData, setFormData, onSubmit, submitText }) => {
         value={formData.directions}
         onChange={(e) => setFormData({ ...formData, directions: e.target.value })}
       />
-      <input
-        className="border p-2 w-full rounded mb-2"
-        placeholder="Tags (comma separated)"
-        value={formData.tags}
-        onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-      />
+      
       <input type="file" accept="image/*" className="mb-3 w-full" onChange={handleImageChange} />
       <button
         onClick={onSubmit}
@@ -283,7 +278,6 @@ function Process() {
       ingredients: ["2 1/2 cups flour", "1 cup butter", "1 cup sugar"],
       directions: ["Mix ingredients", "Bake at 350°F for 10 minutes"],
       image: null,
-      tags: "dessert,quick"
     }
   ];
 
@@ -297,7 +291,6 @@ function Process() {
       ingredients: ["1 ¾ cups flour", "½ cup cocoa powder", "2 tsp baking powder"],
       directions: ["Mix ingredients", "Bake at 350°F for 15 minutes"],
       image: null,
-      tags: "dessert,chocolate"
     }
   ];
 
@@ -318,7 +311,6 @@ function Process() {
     ingredients: "",
     directions: "",
     image: null,
-    tags: ""
   });
 
   const [search, setSearch] = useState("");
@@ -343,7 +335,6 @@ function Process() {
       ingredients: formData.ingredients.split("\n"),
       directions: formData.directions.split("\n"),
       image: formData.image,
-      tags: formData.tags
     };
     const updatedList = [...getCurrentList(), recipe];
     saveCurrentList(updatedList);
@@ -376,7 +367,6 @@ function Process() {
       ingredients: formData.ingredients.split("\n"),
       directions: formData.directions.split("\n"),
       image: formData.image,
-      tags: formData.tags
     };
     const updatedList = getCurrentList().map((r) => (r.id === selectedRecipe.id ? updatedRecipe : r));
     saveCurrentList(updatedList);

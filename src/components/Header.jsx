@@ -6,7 +6,7 @@ function Header() {
       <nav className="max-w-6xl mx-auto flex justify-between items-center px-6">
 
         <h1 className="text-2xl md:text-4xl font-bold text-[#0f0f0f]">
-          Easy Baking Recipe
+          Baking Recipe
         </h1>
 
         <ul className="flex space-x-6">
