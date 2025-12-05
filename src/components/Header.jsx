@@ -1,24 +1,37 @@
-const Header = () =>{
+import { Link } from "react-router-dom";
 
-    return(
-          <>
-          <header className="drop-shadow-md">
-             <article className='flex justify-between items-center'>
-              
-                <h1 className=" text-4xl font-bold text-[#0f0f0f] mt-10">Easy Baking Recipe</h1>
-    
-    <div>
-        <a href="" className="text-[#0f0f0f] border-4 font-bold border-solid border-black text-4xl mr-10 mt-100">Process</a>
+function Header() {
+  return (
+    <header className="bg-[#D48BE3] shadow-md py-4">
+      <nav className="max-w-6xl mx-auto flex justify-between items-center px-6">
 
+        <h1 className="text-2xl md:text-4xl font-bold text-[#0f0f0f]">
+          Easy Baking Recipe
+        </h1>
 
-    </div>
-    </article>
-     </header>
-    
-        </>
-    
-    );
-      
+        <ul className="flex space-x-6">
+          <li>
+            <Link
+              to="/"
+              className="text-lg mid:text-2xl font-bold border-2 md:border-4 border-black px-3 md:px-4 py-1 rounded-xl hover:bg-black hover:text-white transition"
+            >
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/process"
+              className="text-lg mid:text-2xl font-bold border-2 md:border-4 border-black px-3 md:px-4 py-1 rounded-xl hover:bg-black hover:text-white transition"
+            >
+              Process
+            </Link>
+          </li>
+        </ul>
+
+      </nav>
+    </header>
+  );
 }
 
 export default Header;
