@@ -48,8 +48,8 @@ const RecipeForm = ({ formData, setFormData, onSubmit, submitText }) => {
 
 function Process() {
   const [activeCategory, setActiveCategory] = useState("basic");
-  const [basicRecipes, saveBasic] = useLocalStorage("basicRecipes", [{ id: "b1", name: "Classic Cookie", prep: "10m", cook: "10m", total: "20m", ingredients: ["Flour", "Sugar"], directions: ["Mix well", "Bake at 350"], image: null }]);
-  const [cakeRecipes, saveCake] = useLocalStorage("cakeRecipes", [{ id: "c1", name: "chocolate cupcake", prep: "15m", cook: "15m", total: "30m", ingredients: ["Cocoa", "Eggs"], directions: ["Whisk", "Bake"], image: null }]);
+  const [basicRecipes, saveBasic] = useLocalStorage("basicRecipes", [{ id: "b1", name: "Classic Cookie", prep: "", cook: "", total: "", ingredients: ["", ""], directions: ["", ""], image: null }]);
+  const [cakeRecipes, saveCake] = useLocalStorage("cakeRecipes", [{ id: "c1", name: "chocolate cupcake", prep: "", cook: "", total: "", ingredients: ["", ""], directions: ["", ""], image: null }]);
   
   const [selectedRecipe, setSelectedRecipe] = useState(activeCategory === "basic" ? basicRecipes[0] : cakeRecipes[0]);
   const [editing, setEditing] = useState(false);
