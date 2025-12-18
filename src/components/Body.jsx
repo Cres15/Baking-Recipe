@@ -14,9 +14,7 @@ const Body = () => {
               Happiness is <br className="block sm:hidden" /> 
               <span className="text-white/90">Homemade</span>
             </h1>
-            <p className="text-white/80 mt-4 text-sm md:text-xl font-bold uppercase tracking-widest">
-              Warmth and flavor in every bite.
-            </p>
+          
           </header>
 
           {/* Responsive Image Container */}
